@@ -1,0 +1,1 @@
+Repositório do contador de pontos para cardgames, desenvolvido com React Native.
