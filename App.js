@@ -1,5 +1,3 @@
-import React, {Component} from 'react'
-import {Text, View, TouchableHighlight} from 'react-native'
 import {createDrawerNavigator} from 'react-navigation'
 
 import MtgScreen from './src/screens/Mtg'

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {View, Text, Image, TouchableHighlight, Dimensions} from 'react-native'
 
-import Padrao from '../estilos/Padrao'
+import classes from '../estilos'
 
 export default class MenuCentro extends Component{
     state = {
@@ -11,13 +11,13 @@ export default class MenuCentro extends Component{
 
     render(){
         return (
-            <View style={{backgroundColor: '#cc0', flexDirection: 'row', justifyContent: 'space-between'}}>
+            <View style={classes.containerMenuCenter}>
                 <TouchableHighlight >
                     <Image style={{width:(Dimensions.get('window').width / 5),
                         height:(Dimensions.get('window').width / 8)}} source={require('../img/menu.png')} />
                 </TouchableHighlight>
                 <Text style={{fontSize: 30, color: '#fff'}} >{this.state.dado1}</Text>
-                <Text style={[Padrao.invertido, {fontSize: 30, color: '#fff'}]} >{this.state.dado2}</Text>
+                <Text style={[classes.inverted, {fontSize: 30, color: '#fff'}]} >{this.state.dado2}</Text>
                 <TouchableHighlight onPress={this.rolarDado} >
                     <Image style={{width:(Dimensions.get('window').width / 8),
                         height:(Dimensions.get('window').width / 8)}} source={require('../img/d20.png')} />

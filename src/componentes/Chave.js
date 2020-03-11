@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {View, Text, TouchableHighlight, Image} from 'react-native'
 
-import Padrao from '../estilos/Padrao'
+import classes from '../estilos'
 
 export default class Chave extends Component{
     state = {
@@ -36,31 +36,31 @@ export default class Chave extends Component{
 
     chave1 = () => {
         if(this.state.marcador1 === 0){
-            return <Image style={Padrao.iconesKf} source={require('../img/key1d.png')} />
+            return <Image style={classes.iconsKf} source={require('../img/key1d.png')} />
         }else{
-            return <Image style={Padrao.iconesKf} source={require('../img/key1.png')} />
+            return <Image style={classes.iconsKf} source={require('../img/key1.png')} />
         }
     }
 
     chave2 = () => {
         if(this.state.marcador2 === 0){
-            return <Image style={Padrao.iconesKf} source={require('../img/key2d.png')} />
+            return <Image style={classes.iconsKf} source={require('../img/key2d.png')} />
         }else{
-            return <Image style={Padrao.iconesKf} source={require('../img/key2.png')} />
+            return <Image style={classes.iconsKf} source={require('../img/key2.png')} />
         }
     }
 
     chave3 = () => {
         if(this.state.marcador3 === 0){
-            return <Image style={Padrao.iconesKf} source={require('../img/key3d.png')} />
+            return <Image style={classes.iconsKf} source={require('../img/key3d.png')} />
         }else{
-            return <Image style={Padrao.iconesKf} source={require('../img/key3.png')} />
+            return <Image style={classes.iconsKf} source={require('../img/key3.png')} />
         }
     }
 
     render(){
         return(
-            <View style={[Padrao.containerBotoes, {flexDirection: 'row', width: '95%'}]}>
+            <View style={[classes.containerButtons, {flexDirection: 'row', width: '95%'}]}>
                 <TouchableHighlight style={{borderRadius: 50}} onPress={this.viraChave1} >
                     <this.chave1 />
                 </TouchableHighlight>

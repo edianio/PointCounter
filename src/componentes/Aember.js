@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {View, Text, Image, TouchableHighlight} from 'react-native'
 
-import Padrao from '../estilos/Padrao'
+import classes from '../estilos'
 
 export default class Aember extends Component{
     state = {
@@ -20,18 +20,18 @@ export default class Aember extends Component{
 
     render(){
         return(
-            <View style={[Padrao.containerBotoes, {flexDirection: 'row', width: '90%'}]}>
+            <View style={[classes.containerButtons, {flexDirection: 'row', width: '90%'}]}>
                 <TouchableHighlight style={{borderRadius: 40}}  onPress={this.zera} >
-                    <Image style={Padrao.btZerar} source={require('../img/reciclar.png')} />
+                    <Image style={classes.btZero} source={require('../img/reciclar.png')} />
                 </TouchableHighlight>
-                <TouchableHighlight style={Padrao.botao}  onPress={this.incrementa} >
-                    <Text style={Padrao.texto} >+</Text>
+                <TouchableHighlight style={classes.button}  onPress={this.incrementa} >
+                    <Text style={classes.text} >+</Text>
                 </TouchableHighlight>
                 <Text style={{fontSize: 45, color: '#fff'}}>{this.state.marcador}</Text>
-                <TouchableHighlight style={Padrao.botao}  onPress={this.decrementa} >
-                    <Text style={Padrao.texto} >-</Text>
+                <TouchableHighlight style={classes.button}  onPress={this.decrementa} >
+                    <Text style={classes.text} >-</Text>
                 </TouchableHighlight>
-                <Image style={Padrao.iconesKf} source={require('../img/aember.png')} />
+                <Image style={classes.iconsKf} source={require('../img/aember.png')} />
             </View>
         )
     }
